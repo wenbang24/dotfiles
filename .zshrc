@@ -5,8 +5,13 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/path/to/f-sy-h/F-Sy-H.plugin.zsh
 
-eval "$(starship init zsh)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
+fi
 eval "$(zoxide init zsh)"
+
+export CPATH=/opt/homebrew/Cellar/python@3.12/3.12.0/Frameworks/Python.framework/Versions/3.12/include/python3.12
+export PATH="$(brew --prefix)/opt/python@3.12/libexec/bin:$PATH"
 
 alias ..="cd .."
 alias ....="cd ../.."
@@ -17,13 +22,15 @@ alias back="cd .."
 alias python="python3 "
 alias pip="pip3 "
 alias l="ls --color -l -h"
+alias lsall="ls -lah"
 alias sudo="sudo "
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias zshrc="cd ~/dotfiles; nvim .zshrc; source .zshrc; cd"
 alias cd="z "
 alias vim="nvim "
 alias comfyuistart="python3 main.py --force-fp16"
 alias treeall="tree -I '.git' -a ."
+alias gittree="git log --all --decorate --oneline --graph"
+alias gp="git push origin "
 
 mkcd() {
   mkdir $1 && cd $_
@@ -33,22 +40,6 @@ c() {
   g++ $1.cpp -o $1 && ./$1
 }
 
-function p() {
+function py() {
   python3 "$1.py"
 }
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/ben_wang/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/ben_wang/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ben_wang/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/ben_wang/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
