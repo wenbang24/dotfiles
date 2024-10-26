@@ -69,5 +69,19 @@
                 "git_integration": true
             }
         }
+    },
+    "languages": {
+        "C++": {
+            "formatter": {
+                "external": {
+                    "command": "clang-format",
+                    "arguments": [
+                        "-style=file",
+                        "-assume-filename=${buffer_path}"
+                    ]
+                }
+            },
+            "format_on_save": "on"
+        }
     }
 }
