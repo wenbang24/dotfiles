@@ -19,7 +19,7 @@
     "theme": {
         "mode": "system",
         "light": "One Light",
-        "dark": "Catppuccin Mocha"
+        "dark": "Ayu Dark"
     },
     "buffer_font_family": "Fira Code",
     "autosave": {
