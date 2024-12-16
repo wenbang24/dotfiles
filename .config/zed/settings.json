@@ -45,6 +45,7 @@
         }
     },
     "tab_size": 4,
+    "soft_wrap": "editor_width",
     "lsp": {
         "discord_presence": {
             "initialization_options": {

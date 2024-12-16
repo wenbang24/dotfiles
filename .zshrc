@@ -29,7 +29,7 @@ mkcd() {
 }
 
 c() {
-  g++ $1.cpp --std=c++17 -DLOCAL -o $1 && ./$1
+  g++ $1.cpp --std=c++17 -O2 -DLOCAL -Wunreachable-code -o $1 && ./$1
 }
 
 j() {
@@ -38,6 +38,26 @@ j() {
 
 function py() {
   python3 "$1.py"
+}
+
+ignitestart() {
+  brew services start typesense-server
+  brew services start mongodb-community
+}
+
+ignitestop() {
+  brew services stop typesense-server
+  brew services stop mongodb-community
+}
+
+gostart() {
+  brew services start typesense-server
+  brew services start postgresql@17
+}
+
+gostop() {
+  brew services stop typesense-server
+  brew services stop postgresql@17
 }
 
 eval $(thefuck --alias)

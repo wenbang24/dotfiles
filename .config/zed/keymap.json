@@ -2,7 +2,8 @@
     {
         "context": "Editor",
         "bindings": {
-            "cmd-t": "terminal_panel::ToggleFocus"
+            "cmd-t": "terminal_panel::ToggleFocus",
+            "cmd-r": "editor::Rename"
         }
     },
     {
@@ -22,7 +23,8 @@
             "ctrl-6": ["workspace::ActivatePane", 5],
             "ctrl-7": ["workspace::ActivatePane", 6],
             "ctrl-8": ["workspace::ActivatePane", 7],
-            "ctrl-9": ["workspace::ActivatePane", 8]
+            "ctrl-9": ["workspace::ActivatePane", 8],
+            "cmd-r": null
         }
     },
     {
