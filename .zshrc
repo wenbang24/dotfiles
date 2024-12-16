@@ -32,10 +32,6 @@ c() {
   g++ $1.cpp --std=c++17 -O2 -DLOCAL -Wunreachable-code -o $1 && ./$1
 }
 
-j() {
-  javac $1.java && java $1
-}
-
 function py() {
   python3 "$1.py"
 }
@@ -48,16 +44,6 @@ ignitestart() {
 ignitestop() {
   brew services stop typesense-server
   brew services stop mongodb-community
-}
-
-gostart() {
-  brew services start typesense-server
-  brew services start postgresql@17
-}
-
-gostop() {
-  brew services stop typesense-server
-  brew services stop postgresql@17
 }
 
 eval $(thefuck --alias)
