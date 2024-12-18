@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "vim_mode": false,
     "assistant": {
         "default_model": {
             "provider": "copilot_chat",
@@ -18,8 +19,8 @@
     "buffer_font_size": 19,
     "theme": {
         "mode": "system",
-        "light": "One Light",
-        "dark": "Catppuccin Mocha"
+        "light": "Catppuccin Latte",
+        "dark": "Catppuccin Mocha (Blur)"
     },
     "buffer_font_family": "Fira Code",
     "autosave": {
