@@ -20,9 +20,8 @@ alias python="python3 "
 alias pip="pip3 "
 alias ls="eza "
 alias sudo="sudo "
-alias zshrc="nvim ~/dotfiles/.zshrc; source ~/.zshrc; cd"
+alias zshrc="zed ~/dotfiles/.zshrc; source ~/.zshrc; cd"
 alias cd="z"
-alias vim="nvim "
 
 mkcd() {
   mkdir $1 && cd $_
