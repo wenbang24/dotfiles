@@ -22,6 +22,7 @@ alias ls="eza "
 alias sudo="sudo "
 alias zshrc="zed ~/dotfiles/.zshrc; source ~/.zshrc; cd"
 alias cd="z"
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 mkcd() {
   mkdir $1 && cd $_

@@ -9,9 +9,12 @@
     "tleo19",
     "jylamont",
     "pernielsentikaer",
-    "tm.wrnr"
+    "tm.wrnr",
+    "true-real-michael"
   ],
-  "categories": ["Developer Tools"],
+  "categories": [
+    "Developer Tools"
+  ],
   "license": "MIT",
   "commands": [
     {

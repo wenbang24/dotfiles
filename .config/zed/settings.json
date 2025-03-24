@@ -7,7 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-    "vim_mode": false,
+    "show_edit_predictions": true,
+    "features": {
+        "edit_prediction_provider": "copilot"
+    },
+    "vim_mode": true,
     "assistant": {
         "default_model": {
             "provider": "copilot_chat",
@@ -85,5 +89,23 @@
             },
             "format_on_save": "on"
         }
-    }
+    },
+    "file_scan_exclusions": [
+        "**/.ropeproject",
+        "**/__pycache__",
+        "**/.vscode",
+        "**/.git",
+        "**/.hg",
+        "**/.svn",
+        "**/.DS_Store",
+        "**/node_modules",
+        "**/bower_components",
+        "**/dist",
+        "**/build",
+        "**/target",
+        "**/.cache",
+        "**/.next",
+        "**/.nuxt",
+        "**/.idea"
+    ]
 }
