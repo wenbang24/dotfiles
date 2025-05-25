@@ -13,7 +13,7 @@
         "edit_prediction_provider": "copilot"
     },
     "vim_mode": true,
-    "assistant": {
+    "agent": {
         "default_model": {
             "provider": "copilot_chat",
             "model": "gpt-4o"
@@ -21,10 +21,10 @@
         "version": "2"
     },
     "ui_font_size": 18,
-    "buffer_font_size": 19,
+    "buffer_font_size": 18,
     "theme": {
         "mode": "system",
-        "light": "Catppuccin Latte",
+        "light": "Catppuccin Latte (Blur)",
         "dark": "Catppuccin Mocha (Blur)"
     },
     "buffer_font_family": "Fira Code",

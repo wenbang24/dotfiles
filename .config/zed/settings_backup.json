@@ -7,8 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "icon_theme": "Catppuccin Mocha",
+    "show_edit_predictions": true,
     "features": {
-        "inline_completion_provider": "zed"
+        "edit_prediction_provider": "copilot"
     },
     "vim_mode": true,
     "assistant": {
@@ -88,5 +90,23 @@
             },
             "format_on_save": "on"
         }
-    }
+    },
+    "file_scan_exclusions": [
+        "**/.ropeproject",
+        "**/__pycache__",
+        "**/.vscode",
+        "**/.git",
+        "**/.hg",
+        "**/.svn",
+        "**/.DS_Store",
+        "**/node_modules",
+        "**/bower_components",
+        "**/dist",
+        "**/build",
+        "**/target",
+        "**/.cache",
+        "**/.next",
+        "**/.nuxt",
+        "**/.idea"
+    ]
 }
