@@ -1,0 +1,10 @@
+links:
+    - type: inside
+      source: ~/Desktop/everything/Config/dotfiles/
+      target: ~/
+      unsafe: true
+ignore:
+    - .DS_Store
+    - .git
+    - .gitignore
+    - README.md
