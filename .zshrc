@@ -47,6 +47,10 @@ ignitestop() {
   brew services stop mongodb-community
 }
 
+release() {
+    git tag "$1" && git push origin "$1"
+}
+
 eval $(thefuck --alias)
 
 eval "$(atuin init zsh)"

@@ -3,6 +3,10 @@ links:
       source: ~/Desktop/everything/Config/dotfiles/
       target: ~/
       unsafe: true
+    - type: outside
+      source: ~/Desktop/everything/Config/nix
+      target: ~/nix
+      unsafe: true
 ignore:
     - .DS_Store
     - .git
