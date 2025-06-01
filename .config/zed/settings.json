@@ -7,6 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "ssh_connections": [
+    {
+      "host": "192.168.0.201",
+      "username": "spotipi",
+      "projects": [
+        {
+          "paths": [
+            "/"
+          ]
+        },
+        {
+          "paths": [
+            "/home/spotipi"
+          ]
+        },
+        {
+          "paths": [
+            "/home/spotipi/spotipi"
+          ]
+        }
+      ]
+    }
+  ],
     "icon_theme": "Catppuccin Mocha",
     "show_edit_predictions": true,
     "features": {
