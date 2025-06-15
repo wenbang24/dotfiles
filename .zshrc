@@ -24,6 +24,8 @@ alias zshrc="zed ~/dotfiles/.zshrc; source ~/.zshrc; cd"
 alias cd="z"
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias please="sudo !!"
+alias g="git "
+alias k="kubectl "
 
 mkcd() {
   mkdir $1 && cd $_
