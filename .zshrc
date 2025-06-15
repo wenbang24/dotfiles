@@ -26,6 +26,8 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias please="sudo !!"
 alias g="git "
 alias k="kubectl "
+alias gpo="git push origin "
+alias gc="git commit -a -m "
 
 mkcd() {
   mkdir $1 && cd $_
