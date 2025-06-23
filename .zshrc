@@ -28,6 +28,7 @@ alias g="git "
 alias k="kubectl "
 alias gpo="git push origin "
 alias gc="git commit -a -m "
+alias ga="git add --all"
 
 mkcd() {
   mkdir $1 && cd $_
@@ -54,7 +55,5 @@ ignitestop() {
 release() {
     git tag "$1" && git push origin "$1"
 }
-
-eval $(thefuck --alias)
 
 eval "$(atuin init zsh)"

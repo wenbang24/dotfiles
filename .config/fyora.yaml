@@ -5,7 +5,7 @@ links:
       unsafe: true
     - type: outside
       source: ~/Desktop/everything/Config/nix
-      target: ~/nix
+      target: ~/
       unsafe: true
 ignore:
     - .DS_Store
