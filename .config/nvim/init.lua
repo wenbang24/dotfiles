@@ -11,3 +11,5 @@ require('flit').setup {
   -- E.g.: opts = { equivalence_classes = {} }
   opts = {}
 }
+
+vim.opt.shiftwidth = 4
