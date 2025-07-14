@@ -54,12 +54,12 @@ automatically-unhide-macos-hidden-apps = true
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-    inner.horizontal = 12
-    inner.vertical =   12
-    outer.left =       12
-    outer.bottom =     12
-    outer.top =        12
-    outer.right =      12
+    inner.horizontal = 14
+    inner.vertical =   14
+    outer.left =       20
+    outer.bottom =     20
+    outer.top =        20
+    outer.right =      20
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -109,7 +109,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-shift-k = 'move down'
     alt-shift-i = 'move up'
     alt-shift-l = 'move right'
-    
+
     # See: https://nikitabobko.github.io/AeroSpace/guide#tree
     cmd-ctrl-alt-shift-j = 'join-with left'
     cmd-ctrl-alt-shift-k = 'join-with down'

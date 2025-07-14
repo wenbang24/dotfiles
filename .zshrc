@@ -56,4 +56,12 @@ release() {
     git tag "$1" && git push origin "$1"
 }
 
+updateSine() {
+    cd ~/Desktop/everything/Temporary\ Files
+    xattr -d com.apple.quarantine ./sine-osx-arm64
+    chmod +x ./sine-osx-arm64
+    sudo codesign --force --deep --sign - sine-osx-arm64
+    ./sine-osx-arm64
+}
+
 eval "$(atuin init zsh)"
