@@ -21,15 +21,15 @@
     "agent": {
         "default_model": {
             "provider": "copilot_chat",
-            "model": "gpt-4o"
+            "model": "o3-mini"
         },
     },
     "ui_font_size": 18,
     "buffer_font_size": 18,
     "theme": {
         "mode": "system",
-        "light": "Catppuccin Latte (Blur)",
-        "dark": "Catppuccin Mocha (Blur)"
+        "light": "Catppuccin Latte",
+        "dark": "Catppuccin Mocha - No Italics"
     },
     "buffer_font_family": "Fira Code",
     "autosave": {

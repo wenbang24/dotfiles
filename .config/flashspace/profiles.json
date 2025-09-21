@@ -1,0 +1,40 @@
+{
+  "profiles" : [
+    {
+      "id" : "640A3E86-7D10-4DD4-949D-62777F067EFE",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "app.zen-browser.zen",
+              "iconPath" : "/Applications/Zen Browser.app/Contents/Resources/firefox.icns",
+              "name" : "Zen"
+            }
+          ],
+          "assignAppShortcut" : "cmd+ctrl+opt+shift+1",
+          "display" : "U32J59x",
+          "id" : "395DE265-278D-4467-A30C-173CE954C90C",
+          "name" : "Browser",
+          "shortcut" : "opt+1",
+          "symbolIconName" : "network"
+        },
+        {
+          "apps" : [
+            {
+              "bundleIdentifier" : "com.spotify.client",
+              "iconPath" : "/Applications/Spotify.app/Contents/Resources/AppIcon.icns",
+              "name" : "Spotify"
+            }
+          ],
+          "assignAppShortcut" : "cmd+ctrl+opt+shift+6",
+          "display" : "Built-in Retina Display",
+          "id" : "1FF48A34-06F5-467B-B68F-39FA06ECAD59",
+          "name" : "Spotify",
+          "shortcut" : "opt+6",
+          "symbolIconName" : "music.note"
+        }
+      ]
+    }
+  ]
+}

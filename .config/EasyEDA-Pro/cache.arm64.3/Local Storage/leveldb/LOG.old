@@ -1,0 +1,15 @@
+2025/08/06-20:47:10.783 6703 Reusing MANIFEST /Users/ben_wang/.config/EasyEDA-Pro/cache.arm64.3/Local Storage/leveldb/MANIFEST-000001
+2025/08/06-20:47:10.795 6703 Recovering log #3
+2025/08/06-20:47:10.795 6703 Reusing old log /Users/ben_wang/.config/EasyEDA-Pro/cache.arm64.3/Local Storage/leveldb/000003.log 
+2025/08/06-20:48:12.148 6c07 Level-0 table #5: started
+2025/08/06-20:48:12.158 6c07 Level-0 table #5: 459742 bytes OK
+2025/08/06-20:48:12.166 6c07 Delete type=0 #3
+2025/08/06-20:55:14.048 6c07 Level-0 table #7: started
+2025/08/06-20:55:14.061 6c07 Level-0 table #7: 175727 bytes OK
+2025/08/06-20:55:14.071 6c07 Delete type=0 #4
+2025/08/06-20:55:53.071 6c07 Level-0 table #9: started
+2025/08/06-20:55:53.081 6c07 Level-0 table #9: 60268 bytes OK
+2025/08/06-20:55:53.093 6c07 Delete type=0 #6
+2025/08/06-20:56:35.543 6c07 Level-0 table #11: started
+2025/08/06-20:56:35.562 6c07 Level-0 table #11: 60313 bytes OK
+2025/08/06-20:56:35.571 6c07 Delete type=0 #8

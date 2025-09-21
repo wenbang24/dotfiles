@@ -42,6 +42,10 @@ function py() {
   python3 "$1.py"
 }
 
+ckan() {
+    cd "/Applications/CKAN.app/Contents/MacOS"; "/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono" "ckan.exe" consoleui
+}
+
 ignitestart() {
   brew services start typesense-server
   brew services start mongodb-community
