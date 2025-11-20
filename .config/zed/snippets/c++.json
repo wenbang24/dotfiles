@@ -78,5 +78,23 @@
             "}"
         ],
         "description": "Multiple testcases loop"
+    },
+    "Minimal Boilerplate": {
+        "prefix": "bpmin",
+        "body": [
+            "#include <iostream>",
+            "#include <vector>",
+            "",
+            "using namespace std;",
+            "using ll = long long;",
+            "#define FOR(i, a, b) for (int i = a; i < b; i++)",
+            "",
+            "signed main() {",
+            "    ios::sync_with_stdio(0);",
+            "    cin.tie(0);",
+            "    $0",
+            "}"
+        ],
+        "description": "Minimal boilerplate code for C++"
     }
 }
