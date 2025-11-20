@@ -1,13 +1,14 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
   "schemes" : [
     {
       "if" : {
         "device" : {
-          "serialNumber" : "68-d9-3c-6e-e5-d4",
-          "vendorID" : "0x5ac",
           "category" : "mouse",
           "productID" : "0x30d",
-          "productName" : "Benjamin Wang’s Mouse"
+          "productName" : "Benjamin Wang’s Mouse",
+          "serialNumber" : "68-d9-3c-6e-e5-d4",
+          "vendorID" : "0x5ac"
         }
       },
       "scrolling" : {
@@ -23,22 +24,19 @@
     {
       "if" : {
         "device" : {
-          "vendorID" : "0x5ac",
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
           "category" : "trackpad",
-          "productID" : "0x341"
+          "productID" : "0x341",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x5ac"
         }
       },
       "scrolling" : {
         "modifiers" : {
-          "horizontal" : {
-            "command" : {
-              "type" : "pinchZoom"
-            }
+          "command" : {
+            "type" : "pinchZoom"
           }
         }
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }

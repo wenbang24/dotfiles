@@ -35,7 +35,20 @@ mkcd() {
 }
 
 c() {
-  g++ $1.cpp --std=c++17 -O2 -DLOCAL -Wunreachable-code -o $1 && ./$1
+  g++ $1.cpp --std=c++17 -O2 -DLOCAL -Wunreachable-code -o $1 && cat input.txt | ./$1
+}
+
+mc() {
+    local bin="$1"
+    shift
+    local n=0
+    awk -v RS='' -v ORS='\0' 'NF{print}' input.txt | \
+	while IFS= read -r -d '' block; do
+	    ((n++))
+	    echo "--- run $n ---"
+	    # Feed the block to the binary on stdin.
+	    print -r -- "$block" | "$bin" "$@"
+    done
 }
 
 function py() {

@@ -41,5 +41,17 @@
             "cmd-9": ["pane::ActivateItem", 8],
             "cmd-0": "pane::ActivateLastItem"
         }
+    },
+    {
+      "context": "(Editor && edit_prediction_conflict)",
+      "bindings": {
+        "ctrl-alt-cmd-shift-tab": "editor::AcceptEditPrediction"
+      }
+    },
+    {
+      "context": "(Editor && edit_prediction)",
+      "bindings": {
+        "ctrl-alt-cmd-shift-tab": "editor::AcceptEditPrediction"
+      }
     }
 ]

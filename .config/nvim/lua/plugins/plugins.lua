@@ -1,6 +1,65 @@
 return {
-    "ggandor/leap.nvim",
-    "ggandor/flit.nvim",
+    {
+      "folke/flash.nvim",
+      event = "VeryLazy",
+      ---@type Flash.Config
+      opts = {},
+      -- stylua: ignore
+      keys = {
+	{ "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+	{ "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+	{ "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+	{ "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+	{ "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+      },
+    },
+     {
+      "folke/which-key.nvim",
+      event = "VeryLazy",
+      opts = {
+	-- your configuration comes here
+	-- or leave it empty to use the default settings
+	-- refer to the configuration section below
+      },
+      keys = {
+	{
+	  "<leader>?",
+	  function()
+	    require("which-key").show({ global = false })
+	  end,
+	  desc = "Buffer Local Keymaps (which-key)",
+	},
+      },
+    },
+    {
+	"neovim/nvim-lspconfig",
+	event = "BufReadPre",
+	config = function() 
+	    vim.api.nvim_create_autocmd('FileType', {
+	      pattern = { 'c', 'cpp', 'objc', 'objcpp' },
+	      callback = function(args)
+		vim.lsp.start(vim.lsp.config['clangd']({}))
+	      end,
+	    })
+	    vim.api.nvim_create_autocmd('FileType', {
+		pattern = { 'go' },
+		callback = function(args)
+		    vim.lsp.start(vim.lsp.config['gopls']({}))
+		end,
+	    })
+	end,
+    },
+    {
+	"nvimdev/guard.nvim",
+	dependencies = { "nvimdev/guard-collection" },
+	event = "BufReadPre",
+	config = function()
+	    local ft = require("guard.filetype")
+
+	    ft("c,cpp,json"):fmt("clang-format")
+	end,
+    },
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
     {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -31,7 +90,7 @@ return {
     },
     lazy = false,
     config = function()
-      vim.keymap.set("n", "<leader>e", "<Cmd>Neotree reveal<CR>")
+      vim.keymap.set("n", "<leader>e", "<Cmd>Neotree toggle<CR>")
 
       require("neo-tree").setup({
         close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
@@ -41,14 +100,6 @@ return {
         open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
         open_files_using_relative_paths = false,
         sort_case_insensitive = false, -- used when sorting files and directories in the tree
-        sort_function = nil, -- use a custom function for sorting files and directories in the tree
-        -- sort_function = function (a,b)
-        --       if a.type == b.type then
-        --           return a.path > b.path
-        --       else
-        --           return a.type > b.type
-        --       end
-        --   end , -- this sorts files and directories descendantly
         default_component_configs = {
           container = {
             enable_character_fade = true,
@@ -113,27 +164,29 @@ return {
           },
           -- If you don't want to use these columns, you can set `enabled = false` for each of them individually
           file_size = {
-            enabled = true,
+            enabled = false,
             width = 12, -- width of the column
             required_width = 64, -- min width of window required to show this column
           },
           type = {
-            enabled = true,
+            enabled = false,
             width = 10, -- width of the column
             required_width = 122, -- min width of window required to show this column
           },
           last_modified = {
-            enabled = true,
+            enabled = false,
             width = 20, -- width of the column
             required_width = 88, -- min width of window required to show this column
           },
           created = {
-            enabled = true,
+            enabled = false,
             width = 20, -- width of the column
             required_width = 110, -- min width of window required to show this column
           },
           symlink_target = {
-            enabled = false,
+            enabled = true,
+	    width = 20,
+	    required_width = 80,
           },
         },
         -- A list of functions, each representing a global custom command
@@ -142,7 +195,7 @@ return {
         commands = {},
         window = {
           position = "left",
-          width = 40,
+          width = 30,
           mapping_options = {
             noremap = true,
             nowait = true,
