@@ -3,7 +3,7 @@ export PATH=/opt/homebrew/bin:$PATH
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source ~/path/to/f-sy-h/F-Sy-H.plugin.zsh
+source ~/.f-sy-h/F-Sy-H.plugin.zsh
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
