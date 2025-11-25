@@ -39,35 +39,8 @@ c() {
   g++ $1.cpp --std=c++17 -O2 -DLOCAL -Wunreachable-code -o $1 && cat input.txt | ./$1
 }
 
-mc() {
-    local bin="$1"
-    shift
-    local n=0
-    awk -v RS='' -v ORS='\0' 'NF{print}' input.txt | \
-	while IFS= read -r -d '' block; do
-	    ((n++))
-	    echo "--- run $n ---"
-	    # Feed the block to the binary on stdin.
-	    print -r -- "$block" | "$bin" "$@"
-    done
-}
-
 function py() {
   python3 "$1.py"
-}
-
-ckan() {
-    cd "/Applications/CKAN.app/Contents/MacOS"; "/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono" "ckan.exe" consoleui
-}
-
-ignitestart() {
-  brew services start typesense-server
-  brew services start mongodb-community
-}
-
-ignitestop() {
-  brew services stop typesense-server
-  brew services stop mongodb-community
 }
 
 release() {
