@@ -51,33 +51,16 @@
     "terminal": {
         "dock": "right",
         "toolbar": {
-            "title": false
+            "breadcrumbs": false
         }
     },
     "tab_size": 4,
     "soft_wrap": "editor_width",
     "lsp": {
-        "discord_presence": {
-            "initialization_options": {
-                // Base url for all language icons
-                "base_icons_url": "https://raw.githubusercontent.com/xhyrom/zed-discord-presence/main/assets/icons/",
-
-                "state": "Working on {filename}",
-                "details": "In {workspace}",
-                // URL for large image
-                "large_image": "{base_icons_url}/{language}.png",
-                "large_text": "{language:u}", // :u makes first letter upper-case
-                // URL for small image
-                "small_image": "{base_icons_url}/zed.png",
-                "small_text": "Zed",
-
-                // Rules - disable presence in some workspaces
-                "rules": {
-                    "mode": "blacklist", // or whitelist
-                    "paths": ["absolute path"]
-                },
-
-                "git_integration": true
+        "tinymist": {
+            "settings": {
+                "exportPdf": "onSave",
+                "outputPath": "$root/$name"
             }
         }
     },
@@ -136,19 +119,7 @@
         "scrollbar.track.border": "#00000000",
         "scrollbar.track.background": "#00000000",
         "scrollbar.thumb.background": "#00000000",
-        "scrollbar.thumb.hover.background": "#00000000",
-        "scrollbar.thumb.active.background": "#00000000",
         "scrollbar.thumb.border": "#FFFFFF90",
-        "editor.line_highlight": "#00000000",
-        "editor.active_line.background": "#00000015",
-        "editor.selection.background": "#00000000",
-        "editor.selection.foreground": "#00000000",
-        "editor.selection.border": "#00000000",
-        "editor.selection.inactive.foreground": "#00000000",
-        "editor.selection.inactive.border": "#00000000",
-        "editor.selection.active.background": "#00000000",
-        "editor.selection.active.foreground": "#00000000",
-        "editor.selection.active.border": "#00000000",
-        "editor.selection.inactive.background": "#00000000"
+        "editor.active_line.background": "#00000015"
     }
 }

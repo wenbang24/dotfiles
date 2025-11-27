@@ -55,6 +55,7 @@ brew "zsh-f-sy-h"
 brew "arttor/tap/helmify"
 brew "qmk/qmk/qmk"
 brew "unhappychoice/tap/gittype"
+brew "tinymist"
 
 cask "aerospace"
 cask "bitwarden"
