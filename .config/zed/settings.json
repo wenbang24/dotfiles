@@ -31,6 +31,15 @@
     "notification_panel": {
         "button": false,
     },
+    "outline_panel": {
+        "button": false,
+    },
+    "collaboration_panel": {
+        "button": false,
+    },
+    "search": {
+        "button": false,
+    },
     "ui_font_size": 18,
     "buffer_font_size": 18,
     "theme": {
