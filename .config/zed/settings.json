@@ -24,6 +24,7 @@
             "provider": "copilot_chat",
             "model": "gpt-5.1",
         },
+        "button": true
     },
     "debugger": {
         "button": false,
@@ -36,6 +37,9 @@
     },
     "collaboration_panel": {
         "button": false,
+    },
+    "diagnostics": {
+        "button": true,
     },
     "search": {
         "button": false,
@@ -63,6 +67,7 @@
     },
     "tab_bar": {
         "show_nav_history_buttons": false,
+        "show": true,
     },
     "toolbar": {
         "breadcrumbs": false,
