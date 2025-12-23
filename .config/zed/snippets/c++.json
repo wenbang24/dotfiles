@@ -25,15 +25,14 @@
             "using namespace std;",
             "",
             "signed main() {",
-            "    ios::sync_with_stdio(0);",
-            "    cin.tie(0);",
+            "    cin.tie(0)->sync_with_stdio(0);",
             "#ifdef LOCAL",
             "    freopen(\"input.txt\", \"r\", stdin);",
             "#endif\n",
             "    $0",
-            "}"
+            "}",
         ],
-        "description": "Boilerplate code for C++ competitive programming"
+        "description": "Boilerplate code for C++ competitive programming",
     },
     "Testcases": {
         "prefix": "testcases",
@@ -65,8 +64,7 @@
             "}",
             "",
             "signed main() {",
-            "    ios::sync_with_stdio(0);",
-            "    cin.tie(0);",
+            "    cin.tie(0)->sync_with_stdio(0);",
             "#ifdef LOCAL",
             "    freopen(\"input.txt\", \"r\", stdin);",
             "#endif\n",
@@ -75,9 +73,9 @@
             "    FOR(t) {",
             "        solve();",
             "    }",
-            "}"
+            "}",
         ],
-        "description": "Multiple testcases loop"
+        "description": "Multiple testcases loop",
     },
     "Minimal Boilerplate": {
         "prefix": "bpmin",
@@ -90,11 +88,10 @@
             "#define FOR(i, a, b) for (int i = a; i < b; i++)",
             "",
             "signed main() {",
-            "    ios::sync_with_stdio(0);",
-            "    cin.tie(0);",
+            "    cin.tie(0)->sync_with_stdio(0);",
             "    $0",
-            "}"
+            "}",
         ],
-        "description": "Minimal boilerplate code for C++"
-    }
+        "description": "Minimal boilerplate code for C++",
+    },
 }
