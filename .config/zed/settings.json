@@ -50,7 +50,7 @@
     "buffer_font_family": "Fira Code",
     "autosave": {
         "after_delay": {
-            "milliseconds": 1000,
+            "milliseconds": 500,
         },
     },
     "confirm_quit": true,
