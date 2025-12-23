@@ -10,49 +10,60 @@
     "icon_theme": "Catppuccin Mocha",
     "show_edit_predictions": true,
     "features": {
-        "edit_prediction_provider": "copilot"
+        "edit_prediction_provider": "copilot",
     },
     "vim_mode": true,
+    "relative_line_numbers": "enabled",
     "file_types": {
         "Helm": ["**/templates/*.yaml"],
         "Dockerfile": ["Dockerfile*"],
-        "HTML": ["tmpl"]
+        "HTML": ["tmpl"],
     },
     "agent": {
         "default_model": {
             "provider": "copilot_chat",
-            "model": "gpt-5.1"
-        }
+            "model": "gpt-5.1",
+        },
+    },
+    "debugger": {
+        "button": false,
+    },
+    "notification_panel": {
+        "button": false,
     },
     "ui_font_size": 18,
     "buffer_font_size": 18,
     "theme": {
         "mode": "system",
         "light": "Catppuccin Latte",
-        "dark": "Catppuccin Mocha - No Italics"
+        "dark": "Catppuccin Mocha - No Italics",
     },
     "buffer_font_family": "Fira Code",
     "autosave": {
         "after_delay": {
-            "milliseconds": 1000
-        }
+            "milliseconds": 1000,
+        },
     },
     "confirm_quit": true,
     "scrollbar": {
-        "show": "auto"
+        "show": "never",
+        "cursors": false,
     },
     "tabs": {
-        "file_icons": true
+        "file_icons": true,
+    },
+    "tab_bar": {
+        "show_nav_history_buttons": false,
     },
     "toolbar": {
         "breadcrumbs": false,
-        "quick_actions": false
+        "quick_actions": false,
     },
     "terminal": {
         "dock": "right",
         "toolbar": {
-            "breadcrumbs": false
-        }
+            "breadcrumbs": false,
+        },
     },
     "tab_size": 4,
     "soft_wrap": "editor_width",
@@ -60,23 +71,24 @@
         "tinymist": {
             "settings": {
                 "exportPdf": "onSave",
-                "outputPath": "$root/$name"
-            }
-        }
+                "outputPath": "$root/$name",
+            },
+        },
     },
     "languages": {
         "C++": {
+            "show_edit_predictions": false,
             "formatter": {
                 "external": {
                     "command": "clang-format",
                     "arguments": [
                         "-style=file",
-                        "-assume-filename=${buffer_path}"
-                    ]
-                }
+                        "-assume-filename=${buffer_path}",
+                    ],
+                },
             },
-            "format_on_save": "on"
-        }
+            "format_on_save": "on",
+        },
     },
     "file_scan_exclusions": [
         "**/.ropeproject",
@@ -95,7 +107,7 @@
         "**/.next",
         "**/.nuxt",
         "**/.idea",
-        ".[0-9]"
+        ".[0-9]",
     ],
     "experimental.theme_overrides": {
         "renamed.background": "#FFFFFF20",
@@ -120,6 +132,6 @@
         "scrollbar.track.background": "#00000000",
         "scrollbar.thumb.background": "#00000000",
         "scrollbar.thumb.border": "#FFFFFF90",
-        "editor.active_line.background": "#00000015"
-    }
+        "editor.active_line.background": "#00000015",
+    },
 }

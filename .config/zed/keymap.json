@@ -3,14 +3,14 @@
         "context": "Editor",
         "bindings": {
             "cmd-t": "terminal_panel::ToggleFocus",
-            "cmd-r": "editor::Rename"
-        }
+            "cmd-r": "editor::Rename",
+        },
     },
     {
         "context": "Terminal",
         "bindings": {
-            "cmd-t": "terminal_panel::ToggleFocus"
-        }
+            "cmd-t": "terminal_panel::ToggleFocus",
+        },
     },
     {
         "context": "Workspace",
@@ -24,8 +24,8 @@
             "ctrl-7": ["workspace::ActivatePane", 6],
             "ctrl-8": ["workspace::ActivatePane", 7],
             "ctrl-9": ["workspace::ActivatePane", 8],
-            "cmd-r": null
-        }
+            "cmd-r": null,
+        },
     },
     {
         "context": "Pane",
@@ -39,19 +39,26 @@
             "cmd-7": ["pane::ActivateItem", 6],
             "cmd-8": ["pane::ActivateItem", 7],
             "cmd-9": ["pane::ActivateItem", 8],
-            "cmd-0": "pane::ActivateLastItem"
-        }
+            "cmd-0": "pane::ActivateLastItem",
+        },
     },
     {
-      "context": "(Editor && edit_prediction_conflict)",
-      "bindings": {
-        "ctrl-alt-cmd-shift-tab": "editor::AcceptEditPrediction"
-      }
+        "context": "(Editor && edit_prediction_conflict)",
+        "bindings": {
+            "ctrl-alt-cmd-shift-tab": "editor::AcceptEditPrediction",
+        },
     },
     {
-      "context": "(Editor && edit_prediction)",
-      "bindings": {
-        "ctrl-alt-cmd-shift-tab": "editor::AcceptEditPrediction"
-      }
-    }
+        "context": "(Editor && edit_prediction)",
+        "bindings": {
+            "ctrl-alt-cmd-shift-tab": "editor::AcceptEditPrediction",
+        },
+    },
+    {
+        "context": "vim_mode == normal || vim_mode == visual",
+        "bindings": {
+            "s": "vim::PushSneak",
+            "shift-s": "vim::PushSneakBackward",
+        },
+    },
 ]
