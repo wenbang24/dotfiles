@@ -94,4 +94,9 @@
         ],
         "description": "Minimal boilerplate code for C++",
     },
+    "fastendl": {
+        "prefix": "fastendl",
+        "body": ["\"\\n\""],
+        "description": "C++ endline",
+    },
 }

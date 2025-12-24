@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "title_bar": {
+        "show_onboarding_banner": false,
+    },
     "icon_theme": "Catppuccin Mocha",
     "show_edit_predictions": true,
     "features": {
@@ -24,7 +27,7 @@
             "provider": "copilot_chat",
             "model": "gpt-5.1",
         },
-        "button": true
+        "button": true,
     },
     "debugger": {
         "button": false,
