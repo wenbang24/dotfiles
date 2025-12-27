@@ -99,4 +99,14 @@
         "body": ["\"\\n\""],
         "description": "C++ endline",
     },
+    "fileio": {
+        "prefix": "fileio",
+        "body": [
+            "#ifndef LOCAL",
+            "    freopen(\"input.txt\", \"r\", stdin);",
+            "    freopen(\"output.txt\", \"w\", stdout);",
+            "#endif",
+        ],
+        "description": "File I/O",
+    },
 }
