@@ -103,8 +103,8 @@
         "prefix": "fileio",
         "body": [
             "#ifndef LOCAL",
-            "    freopen(\"input.txt\", \"r\", stdin);",
-            "    freopen(\"output.txt\", \"w\", stdout);",
+            "    freopen(\"filein.txt\", \"r\", stdin);",
+            "    freopen(\"fileout.txt\", \"w\", stdout);",
             "#endif",
         ],
         "description": "File I/O",
