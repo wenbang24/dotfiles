@@ -109,4 +109,13 @@
         ],
         "description": "File I/O",
     },
+    "simd": {
+        "prefix": "simd",
+        "body": [
+            "#pragma GCC optimize(\"Ofast,unroll-loops\")",
+            "",
+            "#pragma GCC target(\"avx2\")",
+        ],
+        "description": "SIMD Optimization Pragmas",
+    },
 }
