@@ -50,6 +50,8 @@ brew "qmk/qmk/qmk"
 brew "unhappychoice/tap/gittype"
 brew "tinymist"
 brew "yazi"
+brew "poppler"
+brew "fzf"
 
 cask "aerospace"
 cask "bitwarden"
