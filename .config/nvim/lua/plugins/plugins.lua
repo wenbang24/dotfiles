@@ -57,9 +57,15 @@ return {
             local ft = require("guard.filetype")
 
             ft("c,cpp,json"):fmt("clang-format")
+
+            require("guard").setup({
+                fmt_on_save = true,
+                lsp_as_default_formatter = false,
+            })
         end,
     },
-    { 'akinsho/toggleterm.nvim', version = "*",       config = true },
+    {'akinsho/toggleterm.nvim', version = "*", opts = {--[[ things you want to change go here]]}}
+    },
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -193,6 +199,14 @@ return {
                 -- that will be available in all sources (if not overridden in `opts[source_name].commands`)
                 -- see `:h neo-tree-custom-commands-global`
                 commands = {},
+                event_handlers = {
+                    {
+                        event = "file_opened",
+                        handler = function(file_path)
+                            require("neo-tree.command").execute({ action = "close" })
+                        end,
+                    },
+                },
                 window = {
                     position = "left",
                     width = 30,
