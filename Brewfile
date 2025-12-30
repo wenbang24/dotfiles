@@ -52,6 +52,7 @@ brew "tinymist"
 brew "yazi"
 brew "poppler"
 brew "fzf"
+brew "gcc"
 
 cask "aerospace"
 cask "bitwarden"
