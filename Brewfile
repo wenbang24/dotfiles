@@ -66,6 +66,7 @@ cask "spotify"
 cask "the-unarchiver"
 cask "vesktop"
 cask "zed"
+cask "firefox"
 
 mas "Amphetamine", id: 937984704
 mas "Pure Paste", id: 1611378436
