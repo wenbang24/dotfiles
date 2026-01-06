@@ -1,0 +1,91 @@
+:root {
+    --bg: #15151f;
+    --base: #1a1a26;
+    --border: #2d2e3d;
+    --subtext: #a0a7bf;
+    --text: #c9d2ed;
+    --colour1: #da96ff;
+    --colour2: #93e5e0;
+    --colour3: #ff8dd7;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0px;
+    width: 100vw;
+    height: 100vh; 
+    font-family: monospace;
+}
+
+.container {
+   min-width: 100%;
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.header {
+    color: var(--text);
+    width: 900px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    text-align: center;
+    padding: 18px 0px 16px 0px;
+    background-color: var(--base);
+    border: 2px solid var(--border);
+}
+
+.bookmarks {
+   width: 900px;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 24px;
+}
+
+.bookmark-set {
+    background-color: var(--base);
+    height: 285px;
+    width: 280px;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+}
+
+.bookmark {
+    display: block;
+    color: var(--text);
+    margin: 14px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.bookmark::before {
+    color: var(--subtext);
+    content: "└──";
+    margin-left: 12px;
+    margin-right: 6px;
+}
+.purple .bookmark:hover {
+   color: var(--colour1);
+}
+.cyan .bookmark:hover {
+   color: var(--colour2);
+}
+.pink .bookmark:hover {
+   color: var(--colour3);
+}
+
+.bookmark-title {
+    margin: 14px;
+    margin-top: 18px;
+}
+.purple .bookmark-title {
+    color: var(--colour1);
+}
+.cyan .bookmark-title {
+    color: var(--colour2);
+}
+.pink .bookmark-title {
+    color:  var(--colour3);
+}
