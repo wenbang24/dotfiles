@@ -64,7 +64,6 @@ cask "the-unarchiver"
 cask "vesktop"
 cask "zed"
 cask "firefox"
-cask "leader-key"
 
 mas "Amphetamine", id: 937984704
 mas "Pure Paste", id: 1611378436
