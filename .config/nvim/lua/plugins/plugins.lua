@@ -58,13 +58,13 @@ return {
 
             ft("c,cpp,json"):fmt("clang-format")
 
-            require("guard").setup({
-                fmt_on_save = true,
-                lsp_as_default_formatter = false,
-            })
+            vim.g.guard_config = {
+              fmt_on_save = true,
+              lsp_as_default_formatter = false,
+            }
         end,
     },
-    {'akinsho/toggleterm.nvim', version = "*", opts = {--[[ things you want to change go here]]}}
+    {'akinsho/toggleterm.nvim', version = "*", opts = {--[[ things you want to change go here]]}
     },
     {
         "nvim-neo-tree/neo-tree.nvim",
