@@ -28,6 +28,8 @@
         "HTML": ["tmpl"],
     },
     "agent": {
+        "use_modifier_to_send": true,
+        "play_sound_when_agent_done": true,
         "default_model": {
             "provider": "copilot_chat",
             "model": "gpt-5.1",
@@ -67,7 +69,7 @@
     },
     "confirm_quit": true,
     "scrollbar": {
-        "show": "never",
+        "show": "auto",
         "cursors": false,
     },
     "tabs": {
