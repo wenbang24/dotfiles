@@ -49,6 +49,7 @@ brew "yazi"
 brew "poppler"
 brew "fzf"
 brew "mole"
+brew "kanata"
 
 cask "aerospace"
 cask "chromium"
