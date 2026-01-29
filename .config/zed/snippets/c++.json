@@ -125,5 +125,14 @@
             "constexpr int dx[4] = {1, -1, 0, 0};",
         ],
         "description": "2D grid direction vectors (dy, dx)",
-    }
+    },
+    "lg local def": {
+        "prefix": "lglocal",
+        "body": [
+            "#ifdef LOCAL",
+            "#define __lg(x) 31 - __builtin_clz(x)",
+            "#endif",
+        ],
+        "description": "Local debug logging macro",
+    },
 }
