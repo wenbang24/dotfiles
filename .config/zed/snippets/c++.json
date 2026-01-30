@@ -30,9 +30,9 @@
             "    freopen(\"input.txt\", \"r\", stdin);",
             "#endif\n",
             "    $0",
-            "}",
+            "}"
         ],
-        "description": "Boilerplate code for C++ competitive programming",
+        "description": "Boilerplate code for C++ competitive programming"
     },
     "Testcases": {
         "prefix": "testcases",
@@ -73,9 +73,9 @@
             "    FOR(t) {",
             "        solve();",
             "    }",
-            "}",
+            "}"
         ],
-        "description": "Multiple testcases loop",
+        "description": "Multiple testcases loop"
     },
     "Minimal Boilerplate": {
         "prefix": "bpmin",
@@ -90,14 +90,14 @@
             "signed main() {",
             "    cin.tie(0)->sync_with_stdio(0);",
             "    $0",
-            "}",
+            "}"
         ],
-        "description": "Minimal boilerplate code for C++",
+        "description": "Minimal boilerplate code for C++"
     },
     "fastendl": {
         "prefix": "fastendl",
         "body": ["\"\\n\""],
-        "description": "C++ endline",
+        "description": "C++ endline"
     },
     "fileio": {
         "prefix": "fileio",
@@ -105,34 +105,39 @@
             "#ifndef LOCAL",
             "    freopen(\"filein.txt\", \"r\", stdin);",
             "    freopen(\"fileout.txt\", \"w\", stdout);",
-            "#endif",
+            "#endif"
         ],
-        "description": "File I/O",
+        "description": "File I/O"
     },
     "simd": {
         "prefix": "simd",
         "body": [
             "#pragma GCC optimize(\"Ofast,unroll-loops\")",
             "",
-            "#pragma GCC target(\"avx2\")",
+            "#pragma GCC target(\"avx2\")"
         ],
-        "description": "SIMD Optimization Pragmas",
+        "description": "SIMD Optimization Pragmas"
     },
-    "dy dx": {
-        "prefix": "dydx",
+    "dx dy": {
+        "prefix": "dxdy",
         "body": [
-            "constexpr int dy[4] = {0, 0, 1, -1};",
             "constexpr int dx[4] = {1, -1, 0, 0};",
+            "constexpr int dy[4] = {0, 0, 1, -1};"
         ],
-        "description": "2D grid direction vectors (dy, dx)",
+        "description": "2D grid direction vectors (dy, dx)"
+    },
+    "nx ny": {
+        "prefix": "nxny",
+        "body": ["int nx = x + dx[d], ny = y + dy[d];"],
+        "description": "Next x and y coordinates in direction d"
     },
     "lg local def": {
         "prefix": "lglocal",
         "body": [
             "#ifdef LOCAL",
             "#define __lg(x) 31 - __builtin_clz(x)",
-            "#endif",
+            "#endif"
         ],
-        "description": "Local debug logging macro",
-    },
+        "description": "Local debug logging macro"
+    }
 }
