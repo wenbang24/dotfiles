@@ -50,6 +50,8 @@ brew "poppler"
 brew "fzf"
 brew "mole"
 brew "kanata"
+brew "gcc"
+brew "ccls"
 
 cask "aerospace"
 cask "chromium"

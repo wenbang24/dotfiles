@@ -7,19 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+    "edit_predictions": {
+        "provider": "copilot",
+    },
     "agent_servers": {
         "codex": {
-            "default_model": "gpt-5.1-codex-max/medium"
-        }
+            "default_model": "gpt-5.1-codex-max/medium",
+        },
     },
     "title_bar": {
         "show_onboarding_banner": false,
     },
     "icon_theme": "Catppuccin Mocha",
     "show_edit_predictions": true,
-    "features": {
-        "edit_prediction_provider": "copilot",
-    },
     "vim_mode": true,
     "relative_line_numbers": "enabled",
     "file_types": {
@@ -101,7 +101,8 @@
         },
         "clangd": {
             "binary": {
-                "arguments": ["--query-driver=/usr/bin/g++"],
+                "path": "/opt/homebrew/bin/ccls",
+                "arguments": [],
             },
         },
     },
@@ -118,6 +119,16 @@
                 },
             },
             "format_on_save": "on",
+        },
+        "Lua": {
+            "inlay_hints": {
+                "enabled": true,
+                "show_type_hints": true,
+                "show_parameter_hints": true,
+                "show_other_hints": true,
+            },
+            "format_on_save": "on",
+            "formatter": "language_server",
         },
     },
     "file_scan_exclusions": [
