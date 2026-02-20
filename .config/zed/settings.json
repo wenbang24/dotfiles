@@ -101,8 +101,14 @@
         },
         "clangd": {
             "binary": {
-                "path": "/opt/homebrew/bin/ccls",
-                "arguments": [],
+                "path": "/usr/bin/clangd",
+                "arguments": [
+                    "--background-index",
+                    "--clang-tidy",
+                    "--completion-style=detailed",
+                    "--header-insertion=never",
+                    "--query-driver=/opt/homebrew/bin/g++-15",
+                ],
             },
         },
     },

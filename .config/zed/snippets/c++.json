@@ -2,9 +2,7 @@
     "Boilerplate": {
         "prefix": "boilerplate",
         "body": [
-            "#include <algorithm>",
-            "#include <iostream>",
-            "#include <vector>",
+            "#include <bits/stdc++.h>",
             "",
             "#ifdef LOCAL",
             "#include \"print.h\"",
@@ -37,9 +35,7 @@
     "Testcases": {
         "prefix": "testcases",
         "body": [
-            "#include <algorithm>",
-            "#include <iostream>",
-            "#include <vector>",
+            "#include <bits/stdc++.h>",
             "",
             "#ifdef LOCAL",
             "#include \"print.h\"",
@@ -80,9 +76,7 @@
     "Minimal Boilerplate": {
         "prefix": "bpmin",
         "body": [
-            "#include <iostream>",
-            "#include <vector>",
-            "",
+            "#include <bits/stdc++.h>",
             "using namespace std;",
             "using ll = long long;",
             "#define FOR(i, a, b) for (int i = a; i < b; i++)",
