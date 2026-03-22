@@ -1,0 +1,11 @@
+github-copilot
+*.mdb
+containers
+raycast
+ncmpcpp
+jgit
+.config/spicetify
+.config/gtk-3.0
+.config/gtk-2.0
+./config/Beatprints
+.config/mole/mole.log

@@ -1,0 +1,6 @@
+conversations/
+prompts/
+prompts/*
+prompts
+*.mdb
+data.mdb

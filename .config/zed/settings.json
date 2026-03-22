@@ -11,9 +11,12 @@
         "provider": "copilot",
     },
     "agent_servers": {
-        "codex": {
-            "default_model": "gpt-5.1-codex-max/medium",
+        "claude-acp": {
+            "type": "registry"
         },
+        "github-copilot-cli": {
+            "type": "registry"
+        }
     },
     "title_bar": {
         "show_onboarding_banner": false,
@@ -28,11 +31,20 @@
         "HTML": ["tmpl"],
     },
     "agent": {
+        "profiles": {
+            "make": {
+                "name": "Make",
+                "tools": {},
+                "enable_all_context_servers": false,
+                "context_servers": {}
+            }
+        },
         "use_modifier_to_send": true,
         "play_sound_when_agent_done": true,
         "default_model": {
+            "effort": "high",
             "provider": "copilot_chat",
-            "model": "gpt-5.1",
+            "model": "gpt-5.1-codex-max",
         },
         "button": true,
     },
