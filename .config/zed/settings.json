@@ -11,6 +11,9 @@
         "provider": "copilot",
     },
     "agent_servers": {
+        "codex-acp": {
+            "type": "registry"
+        },
         "claude-acp": {
             "type": "registry"
         },
@@ -125,6 +128,9 @@
         },
     },
     "languages": {
+        "Plain Text": {
+            "show_edit_predictions": false
+        },
         "C++": {
             "show_edit_predictions": false,
             "formatter": {
