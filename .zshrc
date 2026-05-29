@@ -56,3 +56,5 @@ updateSine() {
 }
 
 eval "$(atuin init zsh)"
+
+. "$HOME/.local/bin/env"
