@@ -62,9 +62,6 @@
     "debugger": {
         "button": false,
     },
-    "notification_panel": {
-        "button": false,
-    },
     "outline_panel": {
         "dock": "left",
         "button": false,
