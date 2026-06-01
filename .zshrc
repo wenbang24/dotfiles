@@ -35,10 +35,6 @@ mkcd() {
   mkdir $1 && cd $_
 }
 
-c() {
-  g++ $1.cpp --std=c++17 -O2 -DLOCAL -Wunreachable-code -o $1 && cat input.txt | ./$1
-}
-
 function py() {
   python3 "$1.py"
 }
@@ -47,13 +43,16 @@ release() {
     git tag "$1" && git push origin "$1"
 }
 
-updateSine() {
-    cd ~/Desktop/everything/Temporary\ Files
-    xattr -d com.apple.quarantine ./sine-osx-arm64
-    chmod +x ./sine-osx-arm64
-    sudo codesign --force --deep --sign - sine-osx-arm64
-    ./sine-osx-arm64
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
+
+export EDITOR=nvim
 
 eval "$(atuin init zsh)"
 
