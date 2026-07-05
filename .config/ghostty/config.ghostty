@@ -13,7 +13,7 @@ window-decoration = auto
 window-padding-x = 6
 window-padding-y = 6
 window-padding-balance = true
-macos-hidden = always
+macos-hidden = never
 
 # Shell
 working-directory = ~/Desktop/everything
