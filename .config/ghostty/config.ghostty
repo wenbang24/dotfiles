@@ -22,6 +22,7 @@ working-directory = ~/Desktop/everything
 macos-icon-frame = plastic
 macos-icon = chalkboard
 macos-shortcuts = allow
+macos-titlebar-style = hidden
 
 # Quick-terminal
 quick-terminal-position = bottom

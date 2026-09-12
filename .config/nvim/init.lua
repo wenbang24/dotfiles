@@ -1,43 +1,33 @@
-require("config.lazy")
+-- This file simply bootstraps the installation of Lazy.nvim and then calls other files for execution
+-- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this file and proceed at your own risk.
+local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
-vim.opt.shiftwidth = 4
-vim.cmd.colorscheme "catppuccin"
-vim.cmd.set "relativenumber"
+if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
+  -- stylua: ignore
+  local result = vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+  if vim.v.shell_error ~= 0 then
+    -- stylua: ignore
+    vim.api.nvim_echo({ { ("Error cloning lazy.nvim:\n%s\n"):format(result), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
+    vim.fn.getchar()
+    vim.cmd.quit()
+  end
+end
 
--- Open Neo-tree when nvim starts, if no file is specified
-vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    -- only open neo-tree if no file is passed in args
-    if vim.fn.argc() == 0 then
-      require("neo-tree.command").execute({ toggle = false, dir = vim.loop.cwd() })
-    end
-  end,
-})
+vim.opt.rtp:prepend(lazypath)
 
-vim.g.guard_config = {
-    -- format on write to buffer
-    fmt_on_save = true,
-    -- use lsp if no formatter was defined for this filetype
-    lsp_as_default_formatter = true,
-    -- whether or not to save the buffer after formatting
-    save_on_fmt = true,
-    -- automatic linting
-    auto_lint = true,
-    -- how frequently can linters be called
-    lint_interval = 500,
-    -- show diagnostic after format done
-    refresh_diagnostic = true,
-}
+-- validate that lazy is available
+if not pcall(require, "lazy") then
+  -- stylua: ignore
+  vim.api.nvim_echo({ { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" }, { "Press any key to exit...", "MoreMsg" } }, true, {})
+  vim.fn.getchar()
+  vim.cmd.quit()
+end
 
-require("toggleterm").setup{
-    open_mapping = [[<c-t>]],
-    direction = 'vertical',
-    size = vim.o.columns * 0.3,
-}
+require "lazy_setup"
+require "polish"
 
-vim.keymap.set("n", "<leader>r", function()
-  vim.cmd("w")  -- save file
-  local target = vim.fn.expand("%:t:r")
-  vim.cmd("TermExec cmd='c " .. target .. "' goback=0")
-end, { silent = true })
-
+vim.opt.wrap = true
+vim.opt.tabstop = 4      -- Visual width of a tab character
+vim.opt.shiftwidth = 4   -- Width of an indent level (for < or > commands)
+vim.opt.softtabstop = 4  -- Number of spaces inserted when pressing Tab
+vim.opt.expandtab = true -- Convert tabs to spaces

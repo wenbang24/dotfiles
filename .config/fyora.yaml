@@ -1,11 +1,11 @@
 links:
+    #- type: inside
+    #  source: ~/Desktop/everything/Config/dotfiles/
+    #  target: ~/
+    #  unsafe: true
     - type: inside
-      source: ~/Desktop/everything/Config/dotfiles/
-      target: ~/
-      unsafe: true
-    - type: outside
-      source: ~/Desktop/everything/Config/nix
-      target: ~/
+      source: ~/Desktop/everything/Config/arsenik/
+      target: /etc/kanata/
       unsafe: true
 ignore:
     - .DS_Store

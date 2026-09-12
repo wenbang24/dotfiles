@@ -1,3 +1,5 @@
+config-version = 2
+
 # You can use it to add commands that run after login to macOS user session.
 # 'start-at-login' needs to be 'true' for 'after-login-command' to work
 # Available commands: https://nikitabobko.github.io/AeroSpace/commands
@@ -132,18 +134,16 @@ automatically-unhide-macos-hidden-apps = true
     alt-9 = 'workspace 9'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    cmd-ctrl-alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
-    cmd-ctrl-alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
-    cmd-ctrl-alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
-    cmd-ctrl-alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
-    cmd-ctrl-alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
-    cmd-ctrl-alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
-    cmd-ctrl-alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
-    cmd-ctrl-alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
-    cmd-ctrl-alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+    alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
+    alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
+    alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
+    alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
+    alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
+    alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
+    alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
+    alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
+    alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 
-    # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-    # alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 

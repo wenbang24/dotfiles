@@ -10,7 +10,7 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 fi
 eval "$(zoxide init zsh)"
 
-export PATH="$PATH:/Users/ben_wang/.spicetify"
+export PATH="$PATH:/Users/ben_wang/.local/bin"
 
 alias ..="cd .."
 alias ....="cd ../.."
