@@ -11,6 +11,7 @@ fi
 eval "$(zoxide init zsh)"
 
 export PATH="$PATH:/Users/ben_wang/.local/bin"
+export EDITOR=hx
 
 alias ..="cd .."
 alias ....="cd ../.."
@@ -19,17 +20,17 @@ alias ........="cd ../../../.."
 alias python="python3 "
 alias pip="pip3 "
 alias ls="eza "
-alias sudo="sudo "
-alias zshrc="zed ~/dotfiles/.zshrc; source ~/.zshrc; cd"
+alias zshrc="$EDITOR ~/dotfiles/.zshrc; source ~/.zshrc; cd"
 alias cd="z"
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
-alias please="sudo !!"
+alias fuck="sudo !!"
 alias g="git "
 alias k="kubectl "
 alias gpo="git push origin "
 alias gc="git commit -a -m "
 alias ga="git add --all"
 alias j="just "
+alias tp="tinymist preview --partial-rendering true "
 
 mkcd() {
   mkdir $1 && cd $_
@@ -51,8 +52,6 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
-
-export EDITOR=nvim
 
 eval "$(atuin init zsh)"
 

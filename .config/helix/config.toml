@@ -1,0 +1,19 @@
+theme = "catppuccin_mocha"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+gutters = ["line-numbers", "diff"]
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true

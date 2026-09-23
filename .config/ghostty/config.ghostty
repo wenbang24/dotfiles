@@ -23,6 +23,7 @@ macos-icon-frame = plastic
 macos-icon = chalkboard
 macos-shortcuts = allow
 macos-titlebar-style = hidden
+macos-option-as-alt = left
 
 # Quick-terminal
 quick-terminal-position = bottom
